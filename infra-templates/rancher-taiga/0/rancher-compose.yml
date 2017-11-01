@@ -1,8 +1,8 @@
 .catalog:
-  name: "Rancher Minio Storage Driver"
-  version: 0.3.0
+  name: "Rancher Taiga Stack"
+  version: 0.6.0
   description: |
-    Docker volume plugin for Minio
+    Rancher Taiga Stack
   questions:
     - variable: POSTGRE_USER
       label: PostgreSQL User
@@ -28,7 +28,7 @@
       label: Taiga Static Volume
       type: string
       description: Volume Storage Location for Taiga Static Files
-    default: "taiga_static_vol"
+      default: "taiga_static_vol"
     - variable: TAIGA_LOG_VOL
       label: Taiga Media Volume
       type: string
