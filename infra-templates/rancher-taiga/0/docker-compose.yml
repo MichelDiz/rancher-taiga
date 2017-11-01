@@ -1,4 +1,4 @@
-db:
+postgres:
   image: postgres
   labels:
       io.rancher.scheduler.affinity:host_label_soft: taiga=true
@@ -23,7 +23,7 @@ taigaback:
     POSTGRES_HOST: postgres
     POSTGRES_PORT: 5432
   links:
-    - db:postgres
+    - postgres
   volumes:
     - ${TAIGA_MEDIA_VOL}:/usr/local/taiga/media
     - ${TAIGA_STATIC_VOL}:/usr/local/taiga/static
