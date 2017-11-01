@@ -1,5 +1,7 @@
 db:
   image: postgres
+  labels:
+      io.rancher.scheduler.affinity:host_label_soft: taiga=true
   environment:
     POSTGRES_USER: ${POSTGRE_USER}
     POSTGRES_PASSWORD: ${POSTGRE_PASS}
@@ -9,6 +11,8 @@ db:
 
 taigaback:
   image: htdvisser/taiga-back:stable
+  labels:
+      io.rancher.scheduler.affinity:host_label_soft: taiga=true
   environment:
     SECRET_KEY: examplesecretkey
     EMAIL_USE_TLS: 'True'
@@ -28,6 +32,8 @@ taigaback:
 
 taigafront:
   image: htdvisser/taiga-front-dist:stable
+  labels:
+      io.rancher.scheduler.affinity:host_label_soft: taiga=true
   links:
     - taigaback
   ports:
