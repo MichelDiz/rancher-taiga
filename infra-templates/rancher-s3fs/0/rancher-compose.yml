@@ -1,0 +1,36 @@
+.catalog:
+  name: "Rancher Minio Storage Driver"
+  version: 0.3.0
+  description: |
+    Docker volume plugin for Minio
+  questions:
+    - variable: POSTGRE_USER
+      label: PostgreSQL User
+      type: string
+      description: Username of the Postgresql Database
+      default: "taiga"
+    - variable: POSTGRE_PASS
+      label: PostgreSQL Password
+      type: string
+      description: Password of the Postgresql Database
+      default: "taiga"
+    - variable: VOLUME
+      label: Taiga Database
+      type: string
+      description: Volume Location of taiga Database ( PostgreSQL )
+      required: true
+    - variable: TAIGA_MEDIA_VOL
+      label: Taiga Media Volume
+      type: string
+      description: Volume Location for Taiga Media Files
+      default: "taiga_media_vol"
+    - variable: TAIGA_STATIC_VOL
+      label: Taiga Static Volume
+      type: string
+      description: Volume Storage Location for Taiga Static Files
+    default: "taiga_static_vol"
+    - variable: TAIGA_LOG_VOL
+      label: Taiga Media Volume
+      type: string
+      description: Volume Storage Location for Taiga Log Files
+      default: "taiga_log_vol"

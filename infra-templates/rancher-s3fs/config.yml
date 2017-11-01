@@ -1,0 +1,4 @@
+name: "Rancher Taiga Stack"
+description: "Rancher Taiga Stack based on htdvisser docker image"
+version: 0.6.0
+category: Agile
